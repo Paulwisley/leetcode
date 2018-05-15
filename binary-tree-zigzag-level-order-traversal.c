@@ -47,3 +47,44 @@ vector<vector<int> >zigzaglevelOrder_2(TreeNode *root)
 	} 
 	return array;
 }
+
+//***********************************
+//用双队列 控制从头出列 入列 和从尾部出队入队 顺序 从而实现 不用翻转 而Z形遍历整棵树
+vector<vector<int> > zigzagLevelOrder(TreeNode *root) {
+        vector<vector<int> > ans;
+        if(root == NULL) return ans;
+        deque<TreeNode*> dq; 
+        dq.push_back(root);
+        int zz = 0;
+        while(dq.size())
+        {
+            vector<int> tmp;
+            int h = dq.size();
+            int l = 0;
+            TreeNode *t;
+            while(l < h)
+            {
+                if(zz % 2 == 0)
+                {
+                    t = dq.front();
+                    dq.pop_front();
+                    if(t->left)  dq.push_back(t->left);
+                    if(t->right) dq.push_back(t->right);
+                    tmp.push_back(t->val);
+                    h--;
+                }
+                else
+                {
+                    t = dq.back();
+                    dq.pop_back();
+                    if(t->right) dq.push_front(t->right);
+                    if(t->left) dq.push_front(t->left);
+                    tmp.push_back(t->val);
+                    h--;
+                }
+            }
+            ans.push_back(tmp);
+            zz ++;
+        }
+        return ans;
+    }
