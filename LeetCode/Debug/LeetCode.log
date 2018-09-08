@@ -1,0 +1,19 @@
+﻿  LeetCode.cpp
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(118): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(327): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(361): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(363): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(364): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(463): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(570): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(597): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(638): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(681): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(703): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(751): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(1009): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(1012): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(1125): warning C4244: “+=”: 从“__int64”转换到“int”，可能丢失数据
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(1143): warning C4018: “<”: 有符号/无符号不匹配
+e:\代码\c++\leetcode\leetcode\leetcode.cpp(1159): warning C4018: “<”: 有符号/无符号不匹配
+  LeetCode.vcxproj -> E:\代码\C++\LeetCode\Debug\LeetCode.exe
