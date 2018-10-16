@@ -1,0 +1,41 @@
+﻿生成启动时间为 2018/10/16 14:16:48。
+     1>项目“E:\Project\OJ\LeetCode\LeetCode\LeetCode.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt LeetCode.cpp
+         LeetCode.cpp
+     1>LeetCode.cpp(7): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(18): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(100): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(113): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(119): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(124): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(183): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(226): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(320): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(331): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(332): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(428): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(440): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(486): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(494): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(516): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(524): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(528): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(529): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(654): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(697): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(915): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(1118): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(1165): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(1189): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(1205): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(1252): warning C4244: “+=”: 从“__int64”转换到“int”，可能丢失数据
+     1>LeetCode.cpp(1270): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Project\OJ\LeetCode\x64\Debug\LeetCode.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Project\OJ\LeetCode\x64\Debug\LeetCode.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Project\OJ\LeetCode\x64\Debug\LeetCode.lib" /MACHINE:X64 x64\Debug\LeetCode.obj
+         LeetCode.vcxproj -> E:\Project\OJ\LeetCode\x64\Debug\LeetCode.exe
+     1>已完成生成项目“E:\Project\OJ\LeetCode\LeetCode\LeetCode.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.18
