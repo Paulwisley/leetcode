@@ -31,7 +31,7 @@ vector<string> singlemultiply(int lon, int shor,string lnum, string snum){
 			ans.push_back('0');
             zero--;
 		}
-		//cout<< ans << endl; 
+		cout<< ans << endl; 
 		ansset.push_back(ans);
 	}
 	return ansset;
@@ -39,14 +39,15 @@ vector<string> singlemultiply(int lon, int shor,string lnum, string snum){
 string multiply(string num1, string num2) {
 	int len1 = num1.size();
 	int len2 = num2.size();
-	std::vector<string> temp;
+	vector<string> temp;
 	if(len1 > len2){
 		temp = singlemultiply(len1, len2, num1, num2);
 	}
 	else{
 		temp = singlemultiply(len2, len1, num2, num1);
 	}
-
+    if(temp.size() == 1)
+        return temp[0];
 	int minlen = temp[0].size();
 	int maxlen = temp[temp.size() - 1].size();
 
@@ -58,8 +59,11 @@ string multiply(string num1, string num2) {
 			int tmplen = temp[i].size();
 			sum += temp[i][tmplen - k - 1] - '0';
 		}
-		int tsum = sum % 10 + c;
+		cout<<"sum = "<<sum<<endl;
+		int tsum = (sum + c) % 10;
 		c = sum / 10;
+		cout<<"c = "<<c<<endl;
+		cout<<"tsum = "<<tsum<<endl;
 		multiplyans.insert(multiplyans.begin(), tsum + '0');
 	}
 	int res = maxlen - minlen;
@@ -73,8 +77,8 @@ string multiply(string num1, string num2) {
 }
 
 int main(){
-	string num1 = "2";
-	string num2 = "3";
+	string num1 = "999";
+	string num2 = "999";
 	string ans = multiply(num1, num2);
 	cout<< ans << endl;
 	return 0;
