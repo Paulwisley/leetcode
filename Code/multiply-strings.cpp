@@ -19,24 +19,30 @@ vector<string> singlemultiply(int lon, int shor,string lnum, string snum){
 		int c = 0;
 		string ans = "";
 		for(int j = lon - 1; j >= 0; j--){
-			int tmp = (lnum[j] - '0') * (snum[i] - '0');
-			int mulans = tmp % 10 + c;
+			int tmp = (lnum[j] - '0') * (snum[i] - '0') + c;
+			int mulans = tmp % 10;
 			c = tmp / 10;
 			ans.insert(ans.begin(), mulans + '0');
 			if(j == 0 && c > 0)
 				ans.insert(ans.begin(), c + '0');
 		}
-		int zero = shor - i - 1;
-		while(zero != 0){
+		int suffzero = shor - i - 1;
+		while(suffzero != 0){
 			ans.push_back('0');
-            zero--;
+            --suffzero;
 		}
-		cout<< ans << endl; 
+		//cout<< ans << endl; 
 		ansset.push_back(ans);
 	}
 	return ansset;
 }
-string multiply(string num1, string num2) {
+/*
+方法一:
+简单模拟乘法逐位相乘的过程，然后将结果相加
+注意大数的乘法，加法的模拟过程的进位问题即可
+考虑 乘法中遇到 0 的情况
+*/
+string multiply_01(string num1, string num2) {
 	int len1 = num1.size();
 	int len2 = num2.size();
 	vector<string> temp;
@@ -46,39 +52,46 @@ string multiply(string num1, string num2) {
 	else{
 		temp = singlemultiply(len2, len1, num2, num1);
 	}
+
+    if(num1 == "0" || num2 == "0")
+    	return "0";
     if(temp.size() == 1)
         return temp[0];
+    int len = temp.size();
 	int minlen = temp[0].size();
-	int maxlen = temp[temp.size() - 1].size();
+	int maxlen = temp[len - 1].size();
 
 	string multiplyans = "";
+
 	int c = 0;
-	for(int k = 0; k < minlen; ++k){
+	for(int i = 0; i < len; ++i){
+		int prezero = maxlen - temp[i].size();
+		while(prezero != 0){
+			temp[i].insert(temp[i].begin(), '0');
+			--prezero;
+		}
+	}
+	for(int k = 0; k < maxlen; ++k){
 		int sum = 0;
-		for(int i = 0; i < temp.size(); ++i){
+		for(int i = 0; i < len; ++i){
 			int tmplen = temp[i].size();
 			sum += temp[i][tmplen - k - 1] - '0';
 		}
-		cout<<"sum = "<<sum<<endl;
-		int tsum = (sum + c) % 10;
+		sum += c;
+		int tsum = sum  % 10;
 		c = sum / 10;
-		cout<<"c = "<<c<<endl;
-		cout<<"tsum = "<<tsum<<endl;
-		multiplyans.insert(multiplyans.begin(), tsum + '0');
+		// cout<<"sum = "<<sum<<endl;
+		// cout<<"c = "<<c<<endl;
+		// cout<<"tsum = "<<tsum<<endl;
+		multiplyans.insert(multiplyans.begin(), tsum + '0'); 
 	}
-	int res = maxlen - minlen;
-	int res_0 = temp[temp.size() - 1][res - 1] - '0' + c;
-	//cout << "res_0 = " << res_0 <<endl;
-	multiplyans.insert(multiplyans.begin(), res_0 + '0');
-	for(int m = 0; m < res - 1; m++){
-		multiplyans.insert(multiplyans.begin(), temp[temp.size() - 1][m]);
-	}
+	if(c>0) multiplyans.insert(multiplyans.begin(), c + '0');
 	return multiplyans;
 }
 
 int main(){
-	string num1 = "999";
-	string num2 = "999";
+	string num1 = "3";
+	string num2 = "38";
 	string ans = multiply(num1, num2);
 	cout<< ans << endl;
 	return 0;
