@@ -23,3 +23,34 @@ int strStr(string haystack, string needle) {
        }
        return -1;
 }
+
+//一重循环 没有用什么KMP  感觉路子也是非常野了 用加锁的方法 配合指针维护第一次匹配到的首字母
+char *strStr(char *haystack, char *needle) {
+    int hayLength = strlen(haystack);
+    int needleLength = strlen(needle);
+    char *hayIndex = haystack;
+    char *tmp = hayIndex;
+    char *needleIndex = needle;
+    int lock = 0;
+    if(needleLength == 0)
+        return haystack;
+    //use a slip window to maintain the index
+    while(*hayIndex != '\0'){
+        if(*hayIndex == *needleIndex){
+            if(!lock){
+                tmp = hayIndex;
+                lock = 1;
+            }
+            hayIndex++;
+            needleIndex++;
+        }
+        else{
+            hayIndex = ++tmp;
+            needleIndex = needle;
+            lock = 0;
+        }
+        if(*needleIndex == '\0')
+            return tmp;
+    }
+    return nullptr;
+}
