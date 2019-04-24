@@ -1,0 +1,5 @@
+#vscode 配置文件
+.vscode/
+
+# mac 存储文件
+*.DS_Store
