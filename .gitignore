@@ -3,3 +3,5 @@
 
 # mac 存储文件
 *.DS_Store
+
+*.CPP

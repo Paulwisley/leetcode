@@ -7,6 +7,7 @@
     #include <fstream>
     #include <cmath>
     #include <limits>
+    #include <set>
     #include <list>//STL list
     #include <map>// STL map
     #include <queue>// STL queue
