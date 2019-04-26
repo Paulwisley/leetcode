@@ -10,6 +10,7 @@
     #include <set>
     #include <list>//STL list
     #include <map>// STL map
+    #include <unordered_map>
     #include <queue>// STL queue
     #include <stack>//sTL stack
     #include <bitset>//bitset可按位定义串
