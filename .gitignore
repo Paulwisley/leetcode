@@ -3,3 +3,6 @@
 
 # mac 存储文件
 *.DS_Store
+
+#bin文件夹
+bin/
