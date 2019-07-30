@@ -75,4 +75,6 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
    在连个数组中求 第 k/2 小的数，A[index1],B[index2]，对于这两个边界值，若A中的较小，则将A中小的那一半丢弃，然后再次递归
    同样，若B中的较小，则丢弃B中小的那一半，然后继续下一步递归
    直到 A和B中 中值相等或k=1 终止递归
+
+   也可以考虑  比较连个待合并数组的中值附近的四个值得大小关系来求解
  */
